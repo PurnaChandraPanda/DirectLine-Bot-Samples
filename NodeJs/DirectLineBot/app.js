@@ -1,5 +1,3 @@
-// This loads the environment variables from the .env file
-require('dotenv-extended').load();
 
 var restify = require('restify');
 var builder = require('botbuilder');
@@ -12,8 +10,8 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
 
 // Create chat connector for communicating with the Bot Framework Service
 var connector = new builder.ChatConnector({
-    appId: process.env.MICROSOFT_APP_ID,
-    appPassword: process.env.MICROSOFT_APP_PASSWORD
+    appId: process.env.MicrosoftAppId,
+    appPassword: process.env.MicrosoftAppPassword
 });
 
 // Listen for messages from users 
